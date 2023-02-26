@@ -19,34 +19,35 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-  const std::int64_t size = 10000;
-  std::int64_t arr[size] = { 0 };
+  const std::int64_t SIZE = 10000;
+  std::int64_t a[SIZE] = { 0 };
   std::int64_t j = 0;
   for (int i = 2; i < 10000; i++) {
     if (checkPrime(i)) {
-      arr[j] = i;
+      a[j] = i;
       j++;
     }
   }
-  for (int i = 0; i < size; i++) {
+  for (int i = 0; i < SIZE; i++) {
     if (n - 1 == i) {
-      return arr[i];
+      return a[i];
     }
   }
   return 0;
 }
 
 uint64_t nextPrime(uint64_t value) {
-  const std::int64_t size = 10000;
-  std::int64_t arr[size] = { 0 };
+  const std::int64_t SIZE = 10000;
+  std::int64_t a[SIZE] = { 0 };
   std::int64_t j = 0;
   for (int i = 2; i < 10000; i++) {
     if (checkPrime(i)) {
-      arr[i] = i;
+      a[j] = i;
+      j++;
     }
   }
   for (int i = 0; i < 10000; i++) {
-    if (arr[i] == value) {
+    if (a[i] == value) {
       return arr[i + 1];
     }
   }
@@ -57,7 +58,7 @@ uint64_t sumPrime(uint64_t hbound) {
   std::int64_t sum = 0;
   for (int i = 2; i < hbound; i++) {
     if (checkPrime(i)) {
-      sum = sum + i;
+      sum = += i;
     }
   }
   return sum;
