@@ -4,6 +4,7 @@
 #include "alg.h"
 
 
+
 bool checkPrime(uint64_t value) {
   std::int64_t count_d = 0;
   for (std::int64_t i = 2; i <= std::sqrt(value); i++) {
@@ -58,7 +59,7 @@ uint64_t sumPrime(uint64_t hbound) {
   std::int64_t sum = 0;
   for (int i = 2; i < hbound; i++) {
     if (checkPrime(i)) {
-      sum = += i;
+      sum += i;
     }
   }
   return sum;
