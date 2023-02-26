@@ -48,7 +48,7 @@ uint64_t nextPrime(uint64_t value) {
   }
   for (int i = 0; i < 10000; i++) {
     if (a[i] == value) {
-      return arr[i + 1];
+      return a[i + 1];
     }
   }
   return 0;
